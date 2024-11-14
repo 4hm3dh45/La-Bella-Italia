@@ -1,0 +1,191 @@
+	<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmeds Restaurang</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        /* Grundinställningar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #222; /* Mörkare bakgrund */
+            color: #e0e0e0; /* Ljusare textfärg för kontrast */
+        }
+
+        /* Header och navigering */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #111; /* Mörkare header */
+            color: #fff;
+        }
+
+        header img.logo {
+            width: 150px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #c0c0c0; /* Länkhover-effekt */
+        }
+
+        /* Hero-avsnitt */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #333; /* Mörkare hero-bakgrund */
+        }
+
+        .hero h1, .hero h2 {
+            color: #f4f4f4;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Galleri */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #444; /* Mörkare bakgrund */
+        }
+
+        .gallery img {
+            width: 30%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links li {
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: #f4f4f4;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #c0c0c0; /* Hover-effekt för sociala länkar */
+        }
+
+        /* Formulär */
+        .contact-form {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contact-form form {
+            display: inline-block;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #888;
+            border-radius: 5px;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\Ahmhas1\Desktop\prg/logo.png" alt="La Tavola Italiana Logotyp" class="logo">
+        <nav>
+            <ul>
+                <li><a href="restaurang.html">Hem</a></li>
+                <li><a href="menu.html">Meny</a></li>
+                <li><a href="offers.html">Erbjudanden</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="booking.html">Boka bord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Boka bord</h1>
+        <p>Boka ett bord hos oss genom att fylla i formuläret nedan.</p>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Ditt namn" required>
+            <input type="email" name="email" placeholder="Din e-post" required>
+            <textarea name="message" placeholder="Ditt meddelande" rows="4" required></textarea>
+            <button type="submit">Skicka</button>
+        </form>
+    </section>
+
+
+<!-- Footer -->
+<footer>
+    <p>Kontakt: <a href="mailto:info@bella.com">info@bella.com</a> | Tel: 0123-456789</p>
+    <p>Följ oss på sociala medier:</p>
+    <ul class="social-links">
+        <li><a href="https://www.facebook.com" target="https://www.facebook.com/LaBellaItaliaNZ/?locale=sv_SE">Facebook</a></li>
+        <li><a href="https://www.instagram.com" target="https://www.instagram.com/la.bella_italia/">Instagram</a></li>
+        <li><a href="https://www.twitter.com" target="https://x.com/labellaitalia9">Twitter</a></li>
+    </ul>
+</footer>
+</body>
+</html>

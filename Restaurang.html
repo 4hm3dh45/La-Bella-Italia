@@ -1,0 +1,275 @@
+	<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella Italia!</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        /* Grundinställningar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #222; /* Mörkare bakgrund */
+            color: #e0e0e0; /* Ljusare textfärg för kontrast */
+        }
+
+        /* Header och navigering */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #111; /* Mörkare header */
+            color: #fff;
+        }
+
+        header img.logo {
+            width: 150px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #c0c0c0; /* Länkhover-effekt */
+        }
+
+        /* Hero-avsnitt */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #333; /* Mörkare hero-bakgrund */
+        }
+
+        .hero h1, .hero h2 {
+            color: #f4f4f4;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Galleri */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #444; /* Mörkare bakgrund */
+        }
+
+        .gallery img {
+            width: 30%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links li {
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: #f4f4f4;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #c0c0c0; /* Hover-effekt för sociala länkar */
+        }
+
+        /* Formulär */
+        .contact-form {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contact-form form {
+            display: inline-block;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #888;
+            border-radius: 5px;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header med navigering -->
+    <header>
+        <img src="C:\Users\Ahmhas1\Desktop\prg/logo.png" alt="La Bella Italia Logotyp" class="logo">
+        <nav>
+            <ul>
+                <li><a href="menu.html">Meny</a></li>
+                <li><a href="offers.html">Erbjudanden</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="booking.html">Boka bord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero-avsnitt -->
+    <section id="home" class="hero">
+        <h1>Välkommen till La Bella Italia!</h1>
+        <p>Upplev äkta italiensk matlagning mitt i staden.</p>
+        <img src="C:\Users\Ahmhas1\Desktop\prg\imagies\bilder\about.jpg" alt="Bild av restaurangen">
+    </section>
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italiensk Restaurang</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Styla hela sidan */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Info-boxen */
+        .info-box {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info-box h2 {
+            font-size: 24px;
+            margin: 0;
+            color: #2e8b57; /* Grön färg för rubriken */
+        }
+
+        .info-box p {
+            margin: 10px 0;
+        }
+
+        /* Karta */
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsiv design */
+        @media (max-width: 768px) {
+            .info-box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info-box">
+        <h2>Välkommen till La Bella Italia!</h2>
+        <p>Adress: Västra Hamngatan 23, Göteborg, Sverige</p>
+        <p>Öppettider: Måndag - Fredag: 11:00 - 22:00 | Lördag - Söndag: 12:00 - 23:00</p>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Skapa en karta
+        var map = L.map('map').setView([57.7089, 11.9746], 13); // Koordinater för Göteborg som exempel
+
+        // Lägg till OpenStreetMap som bakgrund
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Lägg till en markör för restaurangen
+        L.marker([57.7089, 11.9746]).addTo(map)
+            .bindPopup("<b>La Bella Italia</b><br>Italiensk restaurang!")
+            .openPopup();
+    </script>
+
+</body>
+</html>
+
+ <!-- Footer -->
+<footer>
+    <p>Kontakt: <a href="mailto:info@bella.com">info@bella.com</a> | Tel: 0123-456789</p>
+    <p>Följ oss på sociala medier:</p>
+    <ul class="social-links">
+        <li><a href="https://www.facebook.com" target="https://www.facebook.com/LaBellaItaliaNZ/?locale=sv_SE">Facebook</a></li>
+        <li><a href="https://www.instagram.com" target="https://www.instagram.com/la.bella_italia/">Instagram</a></li>
+        <li><a href="https://www.twitter.com" target="https://x.com/labellaitalia9">Twitter</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
